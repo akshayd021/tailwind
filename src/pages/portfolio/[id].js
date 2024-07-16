@@ -4,8 +4,8 @@ const Blog = () => {
   return (
     <div className="container mx-auto pl-[5rem] pr-[5rem] mt-10">
       <div className="px-20">
-        <h1 className="text-[4rem] text-center">
-          Fold Twist <span className="text-pink-400">Abstract</span>{" "}
+        <h1 className="text-[4rem] text-center animate-pulse hover:animate-none">
+          Fold Twist <span className="text-pink-400">Abstract</span>
         </h1>
         <p className="max-w-fit">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
@@ -47,10 +47,11 @@ const Blog = () => {
         <img src="/assets/cute.png" alt="cute" className="rounded-lg mt-5" />
         <div className="flex flex-row justify-between mt-10 gap-6">
           <div className="w-1/2">
-            <img src="/assets/bgf.png" alt="red" className="rounded-lg" />
+            <img src="/assets/bgf.png" alt="red" className="rounded-2xl hover:scale-110 transition duration-300 ease-in-out" />
           </div>
           <div className="w-1/2">
-            <img src="/assets/color.png" alt="red" className="rounded-lg" />
+            <img src="/assets/color.png" alt="red"
+              className="rounded-2xl hover:scale-110 transition duration-300 ease-in-out" />
           </div>
         </div>
 

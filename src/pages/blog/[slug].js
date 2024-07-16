@@ -4,7 +4,7 @@ const Blog = () => {
   return (
     <div className="container mx-auto pl-[5rem] pr-[5rem] mt-10">
       <div className="px-20">
-        <h1 className="text-[4rem] text-center">
+        <h1 className="text-[4rem] text-center t animate-bounce">
           The Art of Coffee <span className="text-pink-400">Making</span>{" "}
         </h1>
         <p className="max-w-fit">
@@ -47,10 +47,18 @@ const Blog = () => {
         <img src="/assets/cute.png" alt="cute" className="rounded-lg mt-5" />
         <div className="flex flex-row justify-between mt-10 gap-6">
           <div className="w-1/2">
-            <img src="/assets/red.webp" alt="red" className="rounded-lg" />
+            <img
+              src="/assets/red.webp"
+              alt="red"
+              className="rounded-2xl hover:scale-110 transition duration-300 ease-in-out"
+            />
           </div>
           <div className="w-1/2">
-            <img src="/assets/blue.webp" alt="red" className="rounded-lg" />
+            <img
+              src="/assets/blue.webp"
+              alt="red"
+              className="rounded-2xl hover:scale-110 transition duration-300 ease-in-out"
+            />
           </div>
         </div>
 

@@ -7,121 +7,46 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
+import Causel from "./Causel";
+import Test from "./Test";
 
 const Work = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [title, setTitle] = useState("");
-  const [user, setUser] = useState("");
-  const [description, setDescription] = useState("");
-
-  const data = [
-    {
-      title: "Marcella Leonard",
-      user: "Creative Director",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore",
-    },
-    {
-      title: "John Doe",
-      user: "Software Engineer",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore",
-    },
-    {
-      title: "Jane Smith",
-      user: "Graphic Designer",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore",
-    },
-  ];
-
-  useEffect(() => {
-    const currentItem = data[currentIndex];
-    setTitle(currentItem.title);
-    setUser(currentItem.user);
-    setDescription(currentItem.description);
-  }, [currentIndex]);
-
-  const handlePrev = () => {
-    setCurrentIndex(currentIndex - 1);
-  };
-
-  const handleNext = () => {
-    setCurrentIndex(currentIndex + 1);
-  };
   return (
     <>
-      <div className="bg-gray-400 p-16 rounded-2xl">
+      <div className="bg-gray-400 p-5 lg:p-16 rounded-2xl">
         <div className="px-5">
           <div className="text-gray-700">PORTFOLIO</div>
-          <div className="text-[4rem]">
-            Resent <span className="text-pink-400">Works</span>
+          <div className="text-[2rem] md:text-[4rem]">
+            Resent{" "}
+            <span className="bg-gradient-to-r from-indigo-700 via-purple-600 to-pink-600 inline-block text-transparent bg-clip-text">
+              Works
+            </span>
           </div>
           <div className="text-lg">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation
           </div>
-          <div className="mt-5 mb-14">
-            <FontAwesomeIcon
-              color="black"
-              onClick={handlePrev}
-              icon={faAlipay}
-              className="bg-gray-300 p-4 rounded-full mr-2"
-            />
-            <FontAwesomeIcon
-              color="black"
-              onClick={handleNext}
-              icon={faAffiliatetheme}
-              className="bg-gray-300 p-4 rounded-full mr-2"
-            />
-          </div>
         </div>
-        <div className="flex justify-between rounded-lg ">
-          <Link href={"/portfolio/fold-twist-abstraction"}>
-            <div className="flex flex-col">
-              <img
-                src="/assets/bgf.png"
-                alt="bg"
-                width={480}
-                height={300}
-                className="rounded-2xl"
-              />
-              <ul className="flex flex-row list-disc gap-6 mt-5 text-md">
-                <li className="list-none">VISUAL ART</li> <li> CONCEPT</li>
-              </ul>
-              <div className="text-4xl mt-2 ">Fold Twist Abstract</div>
-            </div>
-          </Link>
-
-          <div className="flex flex-col">
-            <img
-              src="/assets/color.png"
-              alt="bg"
-              width={480}
-              height={300}
-              className="rounded-2xl"
-            />
-            <ul className="flex flex-row list-disc gap-6 mt-5 text-md">
-              <li className="list-none uppercase">3D modeling</li>{" "}
-              <li className="uppercase"> visulart</li>
-              <li> CONCEPT</li>
-            </ul>
-            <div className="text-4xl mt-2 ">Colors of circel</div>
-          </div>
+        <div className="w-full my-5">
+          <Test />
         </div>
       </div>
-      <div className="flex justify-between  flex-row mt-16">
-        <div className="w-2/5   ">
+      <div className="lg:flex block justify-between  flex-row mt-16">
+        <div className="lg:w-2/5 w-full  ">
           <div className="text-gray-700 ">ACHIEVEMENTS </div>
           <div className="text-[4rem]">
-            Awa<span className="text-pink-400">rds</span>
+            Awa
+            <span className="bg-gradient-to-r from-indigo-700 via-purple-600 to-pink-600 inline-block text-transparent bg-clip-text">
+              rds
+            </span>
           </div>
         </div>
-        <div className="w-3/5 flex flex-wrap ">
+
+        <div className="lg:w-3/5 lg:flex block w-full flex-wrap ">
           {[2, 3, 4, 5]?.map(() => {
             return (
-              <div className="bg-gray-500 w-1/2 gap-3 flex-none rounded-md border-b-4 ml--2 border-b-violet-600 p-8 mb-5">
+              <div className="bg-gray-500 hover:bg-gradient-to-br from-violet-500 to-pink-100  w-1/2 gap-3 flex-none rounded-md border-b-4 ml--2 border-b-violet-600 p-8 mb-5">
                 <div className="text-xl">Award Title </div>
                 <p className="text-gray-300">2023</p>
                 <p className="text-xl mt-3">
@@ -157,65 +82,29 @@ const Work = () => {
         <div className="px-5">
           <div className="text-gray-700">JOURNAL</div>
           <div className="text-[4rem]">
-            Blog <span className="text-pink-400">Posts</span>
+            Blog{" "}
+            <span className="bg-gradient-to-r from-indigo-700 via-purple-600 to-pink-600 inline-block text-transparent bg-clip-text">
+              Posts
+            </span>
           </div>
           <div className="text-lg">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation
           </div>
-          <div className="mt-5 mb-14">
-            <FontAwesomeIcon
-              color="black"
-              icon={faAlipay}
-              className="bg-gray-300 p-4 rounded-full mr-2"
-            />
-            <FontAwesomeIcon
-              color="black"
-              icon={faAffiliatetheme}
-              className="bg-gray-300 p-4 rounded-full mr-2"
-            />
-          </div>
         </div>
-        <div className="flex justify-between rounded-lg ">
-          <Link href={"/blog/the-art-of-coffe"}>
-            <div className="flex flex-col">
-              <img
-                src="/assets/bgf.png"
-                alt="bg"
-                width={480}
-                height={300}
-                className="rounded-2xl"
-              />
-              <ul className="flex flex-row list-disc gap-6 mt-5 text-md">
-                <li className="list-none">VISUAL ART</li> <li> CONCEPT</li>
-              </ul>
-              <div className="text-4xl mt-2 ">Fold Twist Abstract</div>
-            </div>
-          </Link>
-
-          <div className="flex flex-col">
-            <img
-              src="/assets/color.png"
-              alt="bg"
-              width={480}
-              height={300}
-              className="rounded-2xl"
-            />
-            <ul className="flex flex-row list-disc gap-6 mt-5 text-md">
-              <li className="list-none uppercase">3D modeling</li>{" "}
-              <li className="uppercase"> visulart</li>
-              <li> CONCEPT</li>
-            </ul>
-            <div className="text-4xl mt-2 ">Colors of circel</div>
-          </div>
+        <div className="w-full my-5 relative">
+          <Test />
         </div>
       </div>
       <div className="flex flex-row justify-between mt-20 ">
         <div className="w-1/3">
           <div className="uppercase">CONTACT</div>
           <div className="text-[4rem]">
-            Let's <span className="text-pink-300">Talk</span>
+            Let's
+            <span className="bg-gradient-to-r from-indigo-700 via-purple-600 to-pink-600 inline-block text-transparent bg-clip-text">
+              Talk
+            </span>
           </div>
         </div>
         <div className="w-2/3 mb-6">

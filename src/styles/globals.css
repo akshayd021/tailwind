@@ -6,8 +6,9 @@ body {
   color: #fff;
   background: #000;
 }
-.head span {
+.head h1 {
   -webkit-text-stroke: 3px #fff;
+  font-size: 8rem;
 }
 #cursor {
   position: absolute;
@@ -16,4 +17,44 @@ body {
   background-color: black;
   border-radius: 50%;
   visibility: hidden;
+}
+.animate-fade-in-down {
+  animation: fade-in-down 1.5s ease-in-out;
+}
+#scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+}
+@keyframes fade-in-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+.slider {
+  gap: 20px;
+}
+.react-multiple-carousel__arrow--left {
+  top: 30% !important;
+  left: 0px !important;
+}
+.react-multiple-carousel__arrow--right {
+  top: 30% !important;
+  right: -2px !important;
+}
+@media only screen and (max-width: 600px) {
+  .head h1 {
+    font-size: 4rem;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .head h1 {
+    font-size: 5rem;
+  }
 }
