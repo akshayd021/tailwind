@@ -18,45 +18,47 @@ const Landing = () => {
           Jackson Jack
         </h1>
       </div>
-      <div className="flex   flex-wrap lg:flex-nowrap lg:flex-now ">
-        <div className="w-full mt-5 lg:w-2/5 order-2">
-          <div className="uppercase text-sm ">BIOGRAPHY</div>
-          <p className="max-w-80 mt-2">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua
-          </p>
+      <div className="flex flex-wrap lg:flex-nowrap  ">
+        <div className="w-full mt-10 lg:mt-0 lg:w-2/5 order-2 md:flex lg:block">
+          <div className="md:flex-col md:mt-5">
+            <div className="uppercase text-sm ">BIOGRAPHY</div>
+            <p className="max-w-80 mt-2">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua
+            </p>
+          </div>
           <div className="flex lg:block">
-            <div className="uppercase mt-10">
+            <div className="uppercase mt-10 md:mt-5">
               <p className="text-sm ">BIOGRAPHY</p>
-              <div className="mt-2 flex flex-row flex-wrap max-w-64">
+              <div className="mt-2 flex flex-row flex-wrap max-w-64 md:max-w-[13rem]">
                 <li className="mx-2">Web Development</li>
                 <li className="mx-2">UI & UX Design</li>
                 <li className="mx-2">SEO</li>
                 <li className="mx-2">Management</li>
               </div>
             </div>
-            <div className="uppercase  mt-10 mb-2 ">
+            <div className="uppercase  mt-10 md:mt-5 mb-2 ">
               <p className="text-sm mb-2">CONNECT</p>
               <FontAwesomeIcon
                 icon={faFacebook}
                 color="black"
-                className="bg-gray-300 p-3 rounded-full mr-2"
+                className="bg-gray-300 p-1 md:p-3 rounded-full mr-2"
               />
               <FontAwesomeIcon
                 color="black"
                 icon={faInstagram}
-                className="bg-gray-300 p-3 rounded-full mr-2"
+                className="bg-gray-300 p-1 md:p-3 rounded-full mr-2"
               />
               <FontAwesomeIcon
                 color="black"
                 icon={faTwitter}
-                className="bg-gray-300 p-3 rounded-full mr-2"
+                className="bg-gray-300 p-1 md:p-3 rounded-full mr-2"
               />
             </div>
           </div>
         </div>
 
-        <div className="w-full order-1 lg:w-2/5 lg:order-2 ">
+        <div className="w-full order-1 lg:w-2/5 lg:order-2 lg:block  flex justify-center items-center">
           <Image
             src="/assets/hero.png"
             alt="heto"
@@ -65,7 +67,7 @@ const Landing = () => {
             className="rounded-full hover:animate-bounce"
           />
         </div>
-        <div className="w-full lg:w-1/5 order-3 lg:text-right mt-10 lg:mt-0 flex lg:block">
+        <div className="w-full lg:w-1/5 order-3 lg:text-right md:mt-16 mt-10 lg:mt-0 flex lg:block md:gap-20 ">
           <div className="flex flex-col lg:block">
             <p className="">PROJECTS DONE</p>
             <h2 className="text-[2rem] md:text-[3.5rem]">
@@ -73,11 +75,11 @@ const Landing = () => {
             </h2>
           </div>
           <div className="flex flex-col lg:block">
-            <p className="md:mt-8">YEARS OF EXPERIENCE</p>
+            <p className="lg:mt-8">YEARS OF EXPERIENCE</p>
             <h2 className="text-[2rem] md:text-[3.5rem]">13+</h2>
           </div>
           <div className="flex flex-col lg:block">
-            <p className="md:mt-8">WORLDWIDE CLIENTS</p>
+            <p className="lg:mt-8">WORLDWIDE CLIENTS</p>
             <h2 className="text-[2rem] md:text-[3.5rem]">
               <CountUp end={900} start={10} duration={3} />
             </h2>
@@ -87,7 +89,7 @@ const Landing = () => {
       <div className="lg:flex block flex-row justify-between mt-20">
         <div className="lg:w-1/3 w-full">
           <div className="uppercase">Services</div>
-          <div className="lg:text-[4rem] text-[2rem]">
+          <div className="text-[2rem] lg:text-[4rem] md:text-[3rem] mb-5 ">
             What I{" "}
             <span className="bg-gradient-to-r from-indigo-700 via-purple-600 to-pink-600 inline-block text-transparent bg-clip-text">
               Do
@@ -123,42 +125,22 @@ const Landing = () => {
           })}
         </div>
       </div>
-      <div className="my-40">
-        <div className="flex justify-between opacity-25 h ">
-          <div className="opacity-70  hover:opacity-100">
-            <Image
-              src="/assets/first.png"
-              alt="fitst"
-              width={160}
-              height={150}
-            />
+      <div className="my-20 lg:my-40">
+        <div className="flex justify-between opacity-25 md:gap-20 gap-10 ">
+          <div className="opacity-70  hover:opacity-100 sm:flex">
+            <img src="/assets/first.png" alt="fitst" />
           </div>
-          <div className="opacity-70  hover:opacity-100">
-            <Image src="/assets/sec.png" alt="fitst" width={160} height={150} />
+          <div className="opacity-70  hover:opacity-100 sm:flex">
+            <img src="/assets/sec.png" alt="fitst" />
           </div>
-          <div className="opacity-70  hover:opacity-100 ">
-            <Image
-              src="/assets/third.png"
-              alt="fitst"
-              width={160}
-              height={150}
-            />
+          <div className="opacity-70  hover:opacity-100 md:block hidden">
+            <img src="/assets/third.png" alt="fitst" />
           </div>
-          <div className="opacity-70  hover:opacity-100">
-            <Image
-              src="/assets/four.png"
-              alt="fitst"
-              width={160}
-              height={150}
-            />
+          <div className="opacity-70  hover:opacity-100  lg:block hidden">
+            <img src="/assets/four.png" alt="fitst" />
           </div>
-          <div className="opacity-70  hover:opacity-100 ">
-            <Image
-              src="/assets/five.png"
-              alt="fitst"
-              width={160}
-              height={150}
-            />
+          <div className="opacity-70  hover:opacity-100  lg:block hidden">
+            <img src="/assets/five.png" alt="fitst" />
           </div>
         </div>
       </div>

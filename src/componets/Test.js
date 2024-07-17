@@ -21,6 +21,7 @@ const Test = () => {
     <div>
       <Carousel
         navigation={true}
+        s
         navigationStep={1}
         swipeable={true}
         draggable={true}
@@ -47,7 +48,7 @@ const Test = () => {
         }}
       >
         <Link href={"/portfolio/fold-twist-abstract"}>
-          <div className="flex flex-col h-full  mt-3 mx-5">
+          <div className="flex flex-col h-full  mt-3 mx-0 md:mx-5">
             <img
               src="/assets/bgf.png"
               alt="bg"
@@ -60,7 +61,7 @@ const Test = () => {
           </div>
         </Link>
         <Link href={"/portfolio/fold-twist-abstract"}>
-          <div className="flex flex-col h-full  mt-3 mx-5">
+          <div className="flex flex-col h-full  mt-3 mx-0 md:mx-5 ">
             <img
               src="/assets/red.webp"
               alt="bg"
@@ -71,11 +72,11 @@ const Test = () => {
               <li className="uppercase"> visulart</li>
               <li> CONCEPT</li>
             </ul>
-            <div className="text-4xl mt-2 ">Colors of circel</div>
+            <div className="text-xl  lg:text-2xl mt-2 ">Colors of circel</div>
           </div>
         </Link>
         <Link href={"/portfolio/fold-twist-abstract"}>
-          <div className="flex flex-col h-full  mt-3 mx-5">
+          <div className="flex flex-col h-full  mt-3 mx-0 md:mx-5">
             <img
               src="/assets/color.png"
               alt="bg"
@@ -84,11 +85,13 @@ const Test = () => {
             <ul className="flex flex-row list-disc gap-6 mt-5 text-md">
               <li className="list-none">VISUAL ART</li> <li> CONCEPT</li>
             </ul>
-            <div className="text-4xl mt-2 ">Fold Twist Abstract</div>
+            <div className=" mt-2  text-xl  lg:text-2xl">
+              Fold Twist Abstract
+            </div>
           </div>
         </Link>
         <Link href={"/portfolio/fold-twist-abstract"}>
-          <div className="flex flex-col h-full  mt-3 mx-5">
+          <div className="flex flex-col h-full  mt-3 mx-0 md:mx-5">
             <img
               src="/assets/blue.webp"
               alt="bg"
@@ -99,7 +102,7 @@ const Test = () => {
               <li className="uppercase"> visulart</li>
               <li> CONCEPT</li>
             </ul>
-            <div className="text-4xl mt-2 ">Colors of circel</div>
+            <div className="text-xl  lg:text-2xl mt-2 ">Colors of circel</div>
           </div>
         </Link>
       </Carousel>
